@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      background-image: url(IMAGES/Hero-Banner-1.jpg);
+      background-size: cover;
+    }
+    /* Basic styling for the navbar */
+    .users-div {
+      text-align: center;
+      margin: 150px;
+    }
+
+    
+
+    /* Popup styling */
+    .user-popup {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+
+    .user-icon {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      background-color: #007bff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-icon:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar with User Icon -->
+  
+  <div class="users-div">
+   <div id="user-icon" class="user-icon">
+    <span>👤</span>
+    
+   </div> <br>
+   <a href="Tazza.html"><button style="    display: inline-block;
+    background-color: #069c54;
+    color: #FFF;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    transition: .3s;">Go To Home</button></a>
+  </div>
+
+  <!-- User Details Popup -->
+  <div id="user-popup" class="user-popup">
+    <div class="popup-content">
+      <span id="close-btn" class="close-btn">&times;</span>
+      <h2>User Details</h2>
+      <p><strong>Name:</strong>Santosh Rungta</p>
+      <p><strong>Email:</strong> santoshrungta@example.com</p>
+      <p><strong>Username:</strong> Santosh Rungta</p>
+      <p><strong>Member Since:</strong> 1 January, 2025</p>
+
+    </div>
+ 
+  </div>
+
+  <script>
+    // Get the popup element and the user icon
+    const popup = document.getElementById("user-popup");
+    const userIcon = document.getElementById("user-icon");
+    const closeBtn = document.getElementById("close-btn");
+
+    // Open the popup when the user clicks the user icon
+    userIcon.addEventListener("click", function() {
+      popup.style.display = "flex";
+    });
+
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener("click", function() {
+      popup.style.display = "none";
+    });
+
+    // Close the popup if the user clicks outside of the popup content
+    window.addEventListener("click", function(event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>

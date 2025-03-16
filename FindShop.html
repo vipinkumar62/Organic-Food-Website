@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5806/5806342.png">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Tazza Organic Food</title>
+
+    <!--========== CSS Link hai==========-->
+    <!--Main1.css-->
+    <link rel="stylesheet" href="CSS/Main1.css">
+    <!--Main2.css-->
+    <link rel="stylesheet" href="CSS/Main2.css">
+
+    <!--ChatBot.css-->
+    <link rel="stylesheet" href="CSS/ChatBot.css">
+    <!--========= Jab user whatsapp par bat karna chahe tab whatsapp open hoga jiske liye cdn link aur style write kiya hu ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .whatsapp-icon {
+            position: fixed;
+            right: 1px;
+            bottom: 300px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 0 0 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 24px;
+            z-index: 1000;
+            text-decoration: none;
+
+        }
+
+        .facebook-icon {
+            position: fixed;
+            right: 1px;
+            bottom: 238px;
+            background-color: #17A9FD;
+
+            color: white;
+            padding: 15px;
+            border-radius: 10px 0 0 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .youtube-icon {
+            position: fixed;
+            right: 1px;
+            bottom: 179px;
+            background-color: #FF0000;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 0 0 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .whatsapp-icon:hover {
+            background-color: #128C7E;
+        }
+
+        .facebook-icon:hover {
+            background-color: #0165E1;
+        }
+
+        .youtube-icon:hover {
+            background-color: rgb(197, 16, 16);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--======= SOCIAL MEDIA ICONS IN RIGHT SIDE OF WEP APP =======-->
+    <!--=========== Whatspp Icon when user click on whatsapp icon the redirect to whtasapp page ===========-->
+    <a href="https://wa.me/+918580976323?text=Hello%20I%20need%20assistance%20with%20your%20services!" target="_blank"
+        class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a onclick="window.confirm('Oops! something went wrong. May facebook page not found.')" class="facebook-icon">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <a onclick="window.confirm('Oops! something went wrong. May youtube page not found.')" class="youtube-icon">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+
+     <!--========== HEADER ==========-->
+
+     <header class="l-header" id="header">
+        <nav class="nav bd-container">
+          <a href="Tazza.html" class="nav__logo nav__logo1">
+            <span class="rohit"
+              ><img class="logo-img" src="IMAGES/logo.png" alt="logo" /></span
+          ></a>
+  
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="Tazza.html" class="nav__link nav__link1">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="about.html" class="nav__link nav__link1">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#services" class="nav__link nav__link1">Services</a>
+              </li>
+              <li class="nav__item">
+                <a href="product.html" class="nav__link nav__link1">Product</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link nav__link1 active-link">Contact us</a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="register.html"
+                  class="nav__link"
+                  style="
+                    background-color: #048654;
+                    padding: 8px;
+                   
+                    color: white;
+                    border-radius: 20px;
+  
+                  "
+                  >Register</a
+                >
+              </li>
+              <li class="nav__item" style="padding-right: 12px;cursor: pointer;"><i style="
+                  background-color: #048654;
+                  padding: 8px;
+                 
+                  color: white;
+                  border-radius: 20px;
+                  
+  
+                " class="fa-regular fa-user"></i></li>
+              <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
+            </ul>
+          </div>
+  
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-menu"></i>
+          </div>
+        </nav>
+
+        <style>
+
+.line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #069C54;
+            animation: lineAnimation 3s ease-out forwards;
+        }
+
+        /* Keyframes for animation */
+        @keyframes lineAnimation {
+            0% {
+                width: 0;
+                left: 0;
+            }
+            50% {
+                width: 100%;
+                left: 0;
+            }
+            100% {
+                width: 0;
+                left: 100%;
+                opacity: 0;
+            }
+        }
+        </style>
+        <!--YAh left to right ja raha hai jab website open hoga to wah ja raha hai-->
+        <div class="line"></div>
+      </header>
+
+    <main class="l-main">
+        <!--========== HOME ==========-->
+        <!--  -->
+
+
+
+
+
+        <!--========== ABOUT ==========-->
+
+
+
+        <!--========== SERVICES ==========-->
+
+        <!--=========Vegetable MENU ==========-->
+
+        <!--==========Massala MENU ==========-->
+
+
+        <!--===== APP =======-->
+
+
+
+        <!--========== CONTACT US ==========-->
+        <style>
+            
+
+
+
+            .contanor {
+                width: 80%;
+                text-align: center;
+                align-content: center;
+                margin: 100px 0 -50px 150px;
+                padding: 20px;
+                border: #048654 2px solid;
+                background-color: #04865430;
+            }
+
+            .map {
+                padding: 20px;
+                float: left;
+                
+                width: 55%;
+            }
+
+            .add {
+                width: 40%;
+                justify-content: left;
+                text-align: left;
+                margin: 5px;
+                padding: 5px;
+                float: right;
+            }
+            
+        </style>
+
+
+        <section>
+            <div class="contanor">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d436.6825632930849!2d81.34551250160574!3d21.23481046315833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDE0JzA0LjkiTiA4McKwMjAnNDMuOSJF!5e1!3m2!1sen!2sin!4v1733334852642!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div>
+                    <h3>Adress</h3>
+                    <ul>
+                        <li>Rungta College Organic Food Industries Pvt. Ltd.</li>
+                        <li>Rungta College R1</li>
+                        <li>Bhilai, Durg, Chhattisgarh</li>
+                        <li>Phone : +91 8580976323</li>
+                        <li>Emaill-id : tazzasupport523@gmail.com</li>
+                        <li>Website : www.tazzaorganic.org</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Icon -->
+        <div class="chat-icon" id="chat-icon">
+            <img src="https://www.sapphireinfocom.com/images/robot1.gif" alt="Chat Icon">
+        </div>
+
+        <!-- Chatbot Popup -->
+        <div class="chat-popup" id="chat-popup">
+            <div class="chat-header">
+                <img src="https://www.sapphireinfocom.com/images/robot1.gif"
+                    style="height: 50px;border: 2px solid #048654;border-radius: 100%;padding: 5px;width: 50px;background-color: #048654;"
+                    alt="Chat Icon">
+                <span style="color: wheat;font-size: 12px;">online</span>
+                <img class="minimize" id="minimize-btn" title="minimize"
+                    src="https://chatbot.in1.nopaperforms.com/static/backend/img/minimize.png" alt="minimize"
+                    style="height: 30px;width: 40px;cursor: pointer;">
+                <img class="refresh" id="refresh-btn"
+                    src="https://chatbot.in1.nopaperforms.com/static/backend/img/refresh.png" alt="refresh"
+                    title="refresh" style="height: 20px;width: 20px;margin-bottom: 4px;cursor: pointer;">
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot-message">
+                    <span>Hi, how can I assist you today?</span>
+                    <small class="time" id="chat-time">12:00 PM</small>
+                </div>
+            </div>
+            <div class="loading" id="loading">
+                <img src="https://www.kurzvmp.cz/wp-content/themes/itvkostce/images/loading.gif" alt="Loading...">
+            </div>
+            <div class="chat-input">
+
+                <input type="text" id="user-input" placeholder="Type a message...">
+                <img id="send-btn" src="https://chatcdn.npfs.co/static/backend/img/chatbots/send_btn.png"
+                    alt="send/rohit-backend" title="Send-Message"
+                    style="height: 40px;width: 40px;margin-top: 2px;margin-left: 10px;cursor: pointer;border-radius: 50%;border-radius: 10px;border: 3px solid #e1ffc7;background-color: greenyellow;">
+                <button id="mic-btn" title="voice-chat">🎙️</button>
+            </div>
+        </div>
+
+        </div>
+        </section>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <hr><br>
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="nav__logo" style="
+                padding-right: 15px;padding-bottom: 8px;">
+            <span
+            style="
+              background: #069c5384;
+              padding: 10px;
+              border-radius: 50px;
+              padding-top: 50px;
+              padding-bottom: 15px;
+              border-bottom: 5px solid #069c53;
+            "
+            ><img
+              class="logo-img"
+              style="height: 60px; width: 110px"
+              src="IMAGES/logo.png"
+              alt="logo" /></span></a
+        ><br /><br />
+                <span class="footer__description">An ISO 9001 : 2005 Goverment Certified.</span>
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <u></u>
+                <h3 class="footer__title">Services</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Delivery</a></li>
+                    <li><a href="#" class="footer__link">Pricing</a></li>
+                    <li><a href="#" class="footer__link">Organic Product</a></li>
+                    <li><a href="#" class="footer__link">Reserve your spot</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Event</a></li>
+                    <li><a href="#" class="footer__link">Contact us</a></li>
+                    <li><a href="#" class="footer__link">Privacy policy</a></li>
+                    <li><a href="#" class="footer__link">Terms of services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Adress</h3>
+                <ul>
+                    <li>Organic Food Industries Pvt. Ltd.</li>
+                    <li>Hanuman Nagar</li>
+                    <li>Patna-800011 Bihar (INDIA)</li>
+                    <li>Phone : +91 8580976323</li>
+                    <li>Emaill-id : support523@gmail.com</li>
+                    <li>Website : www.tazzaorganic.org</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+    </footer>
+    <div style="background-color: #048654;">
+        <p class="footer__copy"
+            style="color: whitesmoke;background-color: #0486545a;  padding-left: 15px;padding-right: 10px;padding-bottom: 10px;margin-left: 5px;padding-top: 10px;">
+            &#169; 2024
+
+            Tazza Organic Industries Pvt. Ltd. <br> All right reserved.</p>
+    </div>
+
+
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!--========== MAIN JS ==========-->
+    <script src="JAVASCRIPT/Main.js"></script>
+
+    <!--======= CONTACT POPUP OPEN HOGA JAB CONTACT BUTTON CLICK HOGA ========-->
+    <script src="JAVASCRIPT/ContactPopup.js"></script>
+
+    <!--======== CHATBOT JS =========-->
+    <script src="JAVASCRIPT/ChatBot.js"></script>
+
+ 
+  <!-- yah animate line nav ya header me ja raha hai -->
+  <script>
+      // Adding the class to trigger the animation
+      window.addEventListener('load', function() {
+          document.querySelector('.line').style.animationPlayState = 'running';
+      });
+  </script>
+
+</body>
+
+</html>

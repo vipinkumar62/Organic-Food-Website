@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Us</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/5806/5806342.png"
+    />
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/Main1.css" />
+    <!--Main2.css-->
+    <link rel="stylesheet" href="CSS/Main2.css" />
+    <style>
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: 'Arial', sans-serif;
+  
+   
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* About section styles */
+.about-us {
+   margin-top: 50px;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #069c5330;
+}
+
+.about-us h1 {
+    font-size: 2.5em;
+    color: #2e7d32;  /* Earthy green */
+    margin-bottom: 20px;
+    background-color: #069c5352;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Flexbox layout for about content */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    margin-top: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px; /* Set max width for the image */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Hover effect to enlarge the image */
+}
+
+.about-text {
+    width: 48%; /* Allow space for the image */
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #388e3c;  /* Slightly darker green */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 1.5em;
+    color: #388e3c;
+    margin-bottom: 15px;
+}
+
+.choose-us {
+    margin-top: 20px;
+}
+
+.accordion {
+    background-color: #388e3c;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.accordion:hover {
+    background-color: #2e7d32;
+}
+
+.panel {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.panel ul li {
+    font-size: 1.1em;
+    color: #555;
+    padding: 5px 0;
+}
+
+/* Responsive Design: Mobile-friendly */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+    </style>
+
+     <!--==*** loading poup open when user website open ***==-->
+     <style>
+        /* Loading screen styles */
+        #loading-screen {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.408);
+          /* Adjust as needed */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+          
+          /* Ensure it stays on top */
+        }
+  
+        /* Hide loading screen after loading */
+        .hidden {
+          display: none;
+        }
+  
+        /* Main content styles */
+        #main-content {
+          display: none;
+          /* Hide main content initially */
+        }
+  
+        #loading-image {
+          width: 50%;
+          /* Adjust for smaller screens */
+        }
+  
+        /* Responsive styles */
+        @media (max-width: 600px) {
+          #loading-image {
+            max-width: 90%;
+            /* Adjust for smaller screens */
+          }
+  
+          .loading_image{
+              height: 70px;
+          }
+  
+          #main-content {
+            padding: 10px;
+          }
+        }
+      </style>
+</head>
+<body>
+ <!-- =============== Loading Screen start ================ -->
+ <div id="loading-screen">
+    <center>
+      <div>
+        <img style="height: 200px;" class="loading_image"
+          src="https://clipart-library.com/images/pco599zei.gif"
+          alt="LoadingPage"
+        />
+      </div>
+    </center>
+  </div>
+
+
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <!--= After loading image-gif, is main content displaying when user open websites =-->
+  </div>
+
+
+
+
+ <!--========== HEADER ==========-->
+
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo nav__logo1">
+          <span class="rohit"
+            ><img class="logo-img" src="IMAGES/logo.png" alt="logo" /></span
+        ></a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="Tazza.html" class="nav__link nav__link1">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link nav__link1 active-link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link nav__link1">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="product.html" class="nav__link nav__link1">Product</a>
+            </li>
+            <li class="nav__item">
+              <a href="FindShop.html" class="nav__link nav__link1">Contact us</a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="register.html"
+                class="nav__link"
+                style="
+                  background-color: #048654;
+                  padding: 8px;
+                 
+                  color: white;
+                  border-radius: 20px;
+
+                "
+                >Register</a
+              >
+            </li>
+            <li class="nav__item" style="padding-right: 12px;cursor: pointer;"><i style="
+                background-color: #048654;
+                padding: 8px;
+               
+                color: white;
+                border-radius: 20px;
+                
+
+              " class="fa-regular fa-user"></i></li>
+            <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+      <!--YAh left to right ja raha hai jab website open hoga to wah ja raha hai-->
+      <div class="line" style=" position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #3498db;
+      animation: lineAnimation 3s ease-out forwards;"></div>
+      
+    <style>
+
+        .line {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: #069C54;
+                    animation: lineAnimation 3s ease-out forwards;
+                }
+        
+                /* Keyframes for animation */
+                @keyframes lineAnimation {
+                    0% {
+                        width: 0;
+                        left: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        left: 0;
+                    }
+                    100% {
+                        width: 0;
+                        left: 100%;
+                        opacity: 0;
+                    }
+                }
+                </style>
+                <!--YAh left to right ja raha hai jab website open hoga to wah ja raha hai-->
+                <div class="line"></div>
+    </header>
+
+    <main class="l-main">
+        
+          <!-- About Section -->
+    <section class="about-us">
+        <div class="container">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <!-- Image Section -->
+                <div class="about-image">
+                    <img src="https://www.pngitem.com/pimgs/m/337-3377097_fruits-and-vegetables-png-transparent-png.png" alt="Organic Products" />
+                </div>
+
+                <!-- Text Section -->
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>We are committed to providing the highest quality organic products, grown sustainably and responsibly. Our goal is to bring nature’s goodness to your table, offering healthy and eco-friendly options for you and your family.</p>
+
+                    <div class="choose-us">
+                        <h3>Why Choose Us?</h3>
+                        <button class="accordion">Click to Reveal More</button>
+                        <div class="panel">
+                            <ul>
+                                <li>Locally Sourced Organic Ingredients</li>
+                                <li>Eco-friendly Packaging</li>
+                                <li>Sustainable Farming Practices</li>
+                                <li>Support for Local Farmers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+     <!--========== FOOTER ==========-->
+     <footer class="footer section bd-container">
+        <hr />
+        <br />
+        <div class="footer__container bd-grid">
+          <div class="footer__content">
+            <a
+              href="#"
+              class="nav__logo"
+              style="padding-right: 15px; padding-bottom: 8px"
+            >
+              <span
+                style="
+                  background: #069c5384;
+                  padding: 10px;
+                  border-radius: 50px;
+                  padding-top: 50px;
+                  padding-bottom: 15px;
+                  border-bottom: 5px solid #069c53;
+                "
+                ><img
+                  class="logo-img"
+                  style="height: 60px; width: 110px"
+                  src="IMAGES/logo.png"
+                  alt="logo" /></span></a
+            ><br /><br />
+            <span class="footer__description"
+              >An ISO 9001 : 2005 Goverment Certified.</span
+            >
+            <div>
+              <a href="#" class="footer__social"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a href="#" class="footer__social"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="#" class="footer__social"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" class="footer__social"
+                ><i class="bx bxl-youtube"></i
+              ></a>
+            </div>
+          </div>
+  
+          <div class="footer__content">
+            <u></u>
+            <h3 class="footer__title">Services</h3>
+            <ul>
+              <li><a href="#" class="footer__link">Delivery</a></li>
+              <li><a href="#" class="footer__link">Pricing</a></li>
+              <li><a href="#" class="footer__link">Organic Product</a></li>
+              <li><a href="#" class="footer__link">Reserve your spot</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer__content">
+            <h3 class="footer__title">Information</h3>
+            <ul>
+              <li><a href="#" class="footer__link">Event</a></li>
+              <li><a href="#" class="footer__link">Contact us</a></li>
+              <li><a href="#" class="footer__link">Privacy policy</a></li>
+              <li><a href="#" class="footer__link">Terms of services</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer__content">
+            <h3 class="footer__title">Adress</h3>
+            <ul>
+              <li>Organic Food Industries Pvt. Ltd.</li>
+              <li>Hanuman Nagar</li>
+              <li>Patna-800011 Bihar (INDIA)</li>
+              <li>Phone : +91 8580976323</li>
+              <li>Emaill-id : support523@gmail.com</li>
+              <li>Website : www.tazzaorganic.org</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <hr />
+      </footer>
+      <div style="background-color: #048654">
+        <p
+          class="footer__copy"
+          style="
+            color: whitesmoke;
+            background-color: #0486545a;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            margin-left: 5px;
+            padding-top: 10px;
+          "
+        >
+          &#169; 2024 Tazza Organic Industries Pvt. Ltd. <br />
+          All right reserved.
+        </p>
+      </div>
+  
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="JAVASCRIPT/Main.js"></script>
+    <script>
+        // JavaScript for Accordion functionality (interactive "Why Choose Us?" section)
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionButtons = document.querySelectorAll('.accordion');
+    
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Toggle the active class to open/close the panel
+            const panel = button.nextElementSibling;
+            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+        });
+    });
+});
+
+    </script>
+
+    <!--==== Laoding home page start ===-->
+    <script>
+        window.addEventListener("load", function () {
+          // Time to display the loading screen (in milliseconds)
+          const loadingDuration = 2000; // 3 seconds
+  
+          // Function to hide the loading screen and show the main content
+          function hideLoadingScreen() {
+            const loadingScreen = document.getElementById("loading-screen");
+            const mainContent = document.getElementById("main-content");
+  
+            // Hide the loading screen with a fade-out effect
+            loadingScreen.style.opacity = "0";
+            setTimeout(() => {
+              loadingScreen.style.display = "none";
+              mainContent.style.display = "block"; // Show the main content
+            }, 500); // Match the duration of the fade-out effect
+          }
+  
+          // Delay hiding the loading screen and showing the main content
+          setTimeout(hideLoadingScreen, loadingDuration);
+        });
+      </script>
+  <!-- yah animate line nav ya header me ja raha hai -->
+  <script>
+      // Adding the class to trigger the animation
+      window.addEventListener('load', function() {
+          document.querySelector('.line').style.animationPlayState = 'running';
+      });
+  </script>
+</body>
+</html>

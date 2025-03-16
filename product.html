@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/5806/5806342.png"
+    />
+
+    <!--========== BOX ICONS ==========-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Tazza Organic Food</title>
+
+    <!--========== CSS Link hai==========-->
+    <!--Main1.css-->
+    <link rel="stylesheet" href="CSS/Main1.css" />
+    <!--Main2.css-->
+    <link rel="stylesheet" href="CSS/Main2.css" />
+
+    <!--ChatBot.css-->
+    <link rel="stylesheet" href="CSS/ChatBot.css" />
+    <!--========= Jab user whatsapp par bat karna chahe tab whatsapp open hoga jiske liye cdn link aur style write kiya hu ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      .whatsapp-icon {
+        position: fixed;
+        right: 1px;
+        bottom: 183px;
+        background-color: #25d366;
+        color: white;
+        padding: 10px;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 25px;
+        z-index: 1000;
+        text-decoration: none;
+      }
+
+      .facebook-icon {
+        position: fixed;
+        right: 1px;
+        bottom: 128px;
+        background-color: #17a9fd;
+
+        color: white;
+        padding: 10px;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 22px;
+        z-index: 1000;
+        text-decoration: none;
+      }
+
+      .youtube-icon {
+        position: fixed;
+        right: 1px;
+        bottom: 76px;
+        background-color: #ff0000;
+        color: white;
+        padding: 10px;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+        z-index: 1000;
+        text-decoration: none;
+      }
+
+      .whatsapp-icon:hover {
+        background-color: #128c7e;
+      }
+
+      .facebook-icon:hover {
+        background-color: #0165e1;
+      }
+
+      .youtube-icon:hover {
+        background-color: rgb(197, 16, 16);
+      }
+    </style>
+    <!--==*** loading poup open when user website open ***==-->
+    <style>
+      /* Loading screen styles */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.408);
+        /* Adjust as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        
+        /* Ensure it stays on top */
+      }
+
+      /* Hide loading screen after loading */
+      .hidden {
+        display: none;
+      }
+
+      /* Main content styles */
+      #main-content {
+        display: none;
+        /* Hide main content initially */
+      }
+
+      #loading-image {
+        width: 50%;
+        /* Adjust for smaller screens */
+      }
+
+      /* Responsive styles */
+      @media (max-width: 600px) {
+        #loading-image {
+          max-width: 90%;
+          /* Adjust for smaller screens */
+        }
+
+        .loading_image{
+            height: 70px;
+        }
+
+        #main-content {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =============== Loading Screen start ================ -->
+    <div id="loading-screen">
+      <center>
+        <div>
+          <img style="height: 200px;" class="loading_image"
+            src="https://clipart-library.com/images/pco599zei.gif"
+            alt="LoadingPage"
+          />
+        </div>
+      </center>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+      <!--= After loading image-gif, is main content displaying when user open websites =-->
+    </div>
+    <!-- =============== Loading Screen stop ================= -->
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bx bx-chevron-up scrolltop__icon"></i>
+    </a>
+
+    <!--======= SOCIAL MEDIA ICONS IN RIGHT SIDE OF WEP APP =======-->
+    <!--=========== Whatspp Icon when user click on whatsapp icon the redirect to whtasapp page ===========-->
+    <a
+      href="https://wa.me/+918580976323?text=Hello%20I%20need%20assistance%20with%20your%20services!"
+      target="_blank"
+      class="whatsapp-icon"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a
+      onclick="window.confirm('Oops! something went wrong. May facebook page not found.')"
+      class="facebook-icon"
+    >
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a
+      onclick="window.confirm('Oops! something went wrong. May youtube page not found.')"
+      class="youtube-icon"
+    >
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo nav__logo1">
+          <span class="rohit"
+            ><img class="logo-img" src="IMAGES/logo.png" alt="logo" /></span
+        ></a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="Tazza.html" class="nav__link nav__link1">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link nav__link1">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link nav__link1">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#fruits" class="nav__link nav__link1 active-link">Product</a>
+            </li>
+            <li class="nav__item">
+              <a href="FindShop.html" class="nav__link nav__link1">Contact us</a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="register.html"
+                class="nav__link"
+                style="
+                  background-color: #048654;
+                  padding: 8px;
+                 
+                  color: white;
+                  border-radius: 20px;
+
+                "
+                >Register</a
+              >
+            </li>
+            <li class="nav__item" style="padding-right: 12px;cursor: pointer;"><i style="
+                background-color: #048654;
+                padding: 8px;
+               
+                color: white;
+                border-radius: 20px;
+                
+
+              " class="fa-regular fa-user"></i></li>
+            <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+      <!--YAh left to right ja raha hai jab website open hoga to wah ja raha hai-->
+      <div class="line" style=" position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #3498db;
+      animation: lineAnimation 3s ease-out forwards;"></div>
+      
+    <style>
+
+        .line {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: #069C54;
+                    animation: lineAnimation 3s ease-out forwards;
+                }
+        
+                /* Keyframes for animation */
+                @keyframes lineAnimation {
+                    0% {
+                        width: 0;
+                        left: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        left: 0;
+                    }
+                    100% {
+                        width: 0;
+                        left: 100%;
+                        opacity: 0;
+                    }
+                }
+                </style>
+                <!--YAh left to right ja raha hai jab website open hoga to wah ja raha hai-->
+                <div class="line"></div>
+    </header>
+
+
+                <!--=============================================-->
+
+    <main class="l-main">
+     
+
+     
+     
+      <!--========== Fruits MENU ==========-->
+      <section class="menu section bd-container" id="fruits">
+        <span class="section-subtitle">Cart Services</span>
+        <u>
+          <h2 class="section-title">List of our product</h2>
+        </u>
+        <h2
+          class="section-title"
+          style="
+            background-color: #0486545a;
+            font-family: monospace;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-bottom: 3px;
+            border-radius: 50px;
+          "
+        >
+          Organic Fruits
+        </h2>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://purepng.com/public/uploads/large/purepng.com-orange-orangesorangefruitbitter-orangeorangesclip-art-1701527336951ldrwe.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Orange</h3>
+            <span class="menu__detail">Fresh and Juicies</span>
+            <span class="menu__preci">1 kg ₹ 52.00 /-</span>
+            <span class="menu__detail">
+              <i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="addcart.html" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.pngmart.com/files/22/Lychee-PNG-Isolated-Pic.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Lychee</h3>
+            <span class="menu__detail">Sweety and Tazzi</span>
+            <span class="menu__preci">3kg ₹ 120.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="addcart.html" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.pngall.com/wp-content/uploads/11/Apple.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Apples</h3>
+            <span class="menu__detail">Rassilla Sweety</span>
+            <span class="menu__preci">1 kg ₹ 90.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="addcart.html" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://www.freepnglogos.com/uploads/cherry-png/cherry-harvest-schedule-brecknock-orchard-mohnton-34.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Cherry</h3>
+            <span class="menu__detail">Red and Juicies</span>
+            <span class="menu__preci">1 kg ₹ 52.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://pnghq.com/wp-content/uploads/mango-png-image-free-download-98765-1536x1270.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Mango</h3>
+            <span class="menu__detail">Rassilla and Tazzi</span>
+            <span class="menu__preci">2kg ₹ 110.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Fruit-PNG/Large_Bananas_PNG_Clipart.png?m=1434276917"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Banana</h3>
+            <span class="menu__detail">Healthy and Fruitie</span>
+            <span class="menu__preci">₹9.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              2 days ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://www.pngarts.com/files/5/Guava-PNG-Picture.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Guava</h3>
+            <span class="menu__detail">Fresh and sweets</span>
+            <span class="menu__preci">1 kg ₹ 30.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.pngmart.com/files/22/Lychee-PNG-Isolated-Pic.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Lychee</h3>
+            <span class="menu__detail">Sweety and Tazzi</span>
+            <span class="menu__preci">3kg ₹ 120.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              21 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://graficsea.com/wp-content/uploads/2022/01/Anar-Pomegranate-.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Pomegranate</h3>
+            <span class="menu__detail">Red and Juicies</span>
+            <span class="menu__preci">1 kg ₹ 90.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+        <br /><br />
+        <div
+          class="contact__button"
+          style="align-items: center; justify-content: center; display: flex"
+        >
+          <a href="#" class="button"
+            >More Items <i class="fa-solid fa-right-to-bracket"></i
+          ></a>
+        </div>
+      </section>
+
+      <!--=========Vegetable MENU ==========-->
+      <section class="menu section bd-container" id="vegetable">
+        <h2
+          class="section-title"
+          style="
+            background-color: #0486545a;
+            font-family: monospace;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-bottom: 3px;
+            border-radius: 50px;
+          "
+        >
+          Organic Vegetable
+        </h2>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://w7.pngwing.com/pngs/600/302/png-transparent-baingan-bharta-vegetarian-cuisine-eggplant-vegetable-cauliflower-natural-foods-food-vegetables.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Baigan-Bharta</h3>
+            <span class="menu__detail">Fresh Vegies</span>
+            <span class="menu__preci">1 kg ₹ 22.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="http://clipart-library.com/image_gallery2/Potato-PNG-Picture.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Potato (Aaloo)</h3>
+            <span class="menu__detail">Organic and Tazzi</span>
+            <span class="menu__preci">3kg ₹ 120.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 mon ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://freepngimg.com/thumb/categories/2972.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Cauliflower</h3>
+            <span class="menu__detail">Pure Vegies</span>
+            <span class="menu__preci">1 kg ₹ 90.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              5 days ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="http://www.pngall.com/wp-content/uploads/2016/04/Tomato-Download-PNG.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Tamato</h3>
+            <span class="menu__detail">Red and Sour</span>
+            <span class="menu__preci">1 kg ₹ 52.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://freepngimg.com/thumb/pepper/154037-pepper-green-bell-free-clipart-hq.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Shimla Mirch</h3>
+            <span class="menu__detail">Organic and Tazzi</span>
+            <span class="menu__preci">2kg ₹ 110.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              3 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://cdn.pixabay.com/photo/2020/06/13/13/56/okra-5294293_1280.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Lady-Finger</h3>
+            <span class="menu__detail">Healthy and Natural</span>
+            <span class="menu__preci">1kg ₹9.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 day ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://pluspng.com/img-png/onion-png-onion-png-image-788.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Onion</h3>
+            <span class="menu__detail">Fresh and Organic</span>
+            <span class="menu__preci">1 kg ₹ 30.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://pluspng.com/img-png/vegetable-png-cabbage-carrot-png-image-1458.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Cabbage</h3>
+            <span class="menu__detail">Greeny and Tazzi</span>
+            <span class="menu__preci">3kg ₹ 120.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              30 days ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.pngarts.com/files/4/Carrot-PNG-Download-Image.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">carrot</h3>
+            <span class="menu__detail">Organic salad</span>
+            <span class="menu__preci">1 kg ₹ 90.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+        <br /><br />
+        <div
+          class="contact__button"
+          style="align-items: center; justify-content: center; display: flex"
+        >
+          <a href="#" class="button"
+            >More Items <i class="fa-solid fa-right-to-bracket"></i
+          ></a>
+        </div>
+      </section>
+
+      <!--==========Massala MENU ==========-->
+      <section class="menu section bd-container" id="groceries">
+        <h2
+          class="section-title"
+          style="
+            background-color: #0486545a;
+            font-family: monospace;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-bottom: 3px;
+            border-radius: 50px;
+          "
+        >
+          Organic Massala
+        </h2>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://pngimg.com/uploads/black_pepper/black_pepper_PNG16.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Black-Pepper</h3>
+            <span class="menu__detail">Organic And Dry</span>
+            <span class="menu__preci">1 kg ₹ 520.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.pngkey.com/png/full/100-1006934_red-chili-powder-chilli-powder-bowl-png.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Chilli</h3>
+            <span class="menu__detail">Dried and Red</span>
+            <span class="menu__preci">1kg ₹ 120.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.pngmart.com/files/22/Coriander-PNG-Isolated-Photo.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Coriander</h3>
+            <span class="menu__detail">Mahak-Massala</span>
+            <span class="menu__preci">1 kg ₹ 90.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://cdn.pixabay.com/photo/2022/12/26/10/01/turmeric-powder-7678634_1280.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Turmeric</h3>
+            <span class="menu__detail">Dried-Powder</span>
+            <span class="menu__preci">1 kg ₹ 102.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              25 days ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://naubaharmasale.com/wp-content/uploads/2022/06/Jeera.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Jeera</h3>
+            <span class="menu__detail">Dried-Powder</span>
+            <span class="menu__preci">2kg ₹ 110.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://telankhana.in/wp-content/uploads/2021/05/Masalas.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Mixture-Massaala</h3>
+            <span class="menu__detail">Healthy and Dried</span>
+            <span class="menu__preci">5kg ₹900.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              50 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="menu__container bd-grid">
+          <div class="menu__content">
+            <img
+              src="https://www.freeiconspng.com/uploads/spice-products-png-5.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Vegies-Massala</h3>
+            <span class="menu__detail">Fresh and sweets</span>
+            <span class="menu__preci">1 kg ₹ 30.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              just now</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://clipart-library.com/image_gallery2/Garlic-PNG-Image.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Garlic</h3>
+            <span class="menu__detail">Tikhi and Tazzi</span>
+            <span class="menu__preci">3kg ₹ 120.00 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 min ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+
+          <div class="menu__content">
+            <img
+              src="https://www.alamanaherbs.com/images/ph99.png"
+              alt=""
+              class="menu__img"
+            />
+            <h3 class="menu__name">Organic-Massala</h3>
+            <span class="menu__detail">All Mixed </span>
+            <span class="menu__preci">1 kg ₹ 90.50 /-</span>
+            <span class="menu__detail"
+              ><i
+                class="fa-solid fa-check"
+                style="
+                  border: 1px solid #048654;
+                  border-radius: 10%;
+                  background-color: #069c54;
+                  color: whitesmoke;
+                "
+              ></i>
+              1 day ago</span
+            >
+            <a href="#" class="button menu__button"
+              ><i class="bx bx-cart-alt"></i
+            ></a>
+          </div>
+        </div>
+        <br /><br />
+        <div
+          class="contact__button"
+          style="align-items: center; justify-content: center; display: flex"
+        >
+          <a href="#" class="button"
+            >More Items <i class="fa-solid fa-right-to-bracket"></i>
+          </a>
+        </div>
+      </section>
+
+     <!-- Chatbot Icon -->
+     <div class="chat-icon" id="chat-icon">
+        <img src="https://www.sapphireinfocom.com/images/robot1.gif" alt="Chat Icon">
+    </div>
+
+    <!-- Chatbot Popup -->
+    <div class="chat-popup" id="chat-popup">
+        <div class="chat-header">
+            <img src="https://www.sapphireinfocom.com/images/robot1.gif"
+                style="height: 50px;border: 2px solid #048654;border-radius: 100%;padding: 5px;width: 50px;background-color: #048654;"
+                alt="Chat Icon">
+            <span style="color: wheat;font-size: 12px;">online</span>
+            <img class="minimize" id="minimize-btn" title="minimize"
+                src="https://chatbot.in1.nopaperforms.com/static/backend/img/minimize.png" alt="minimize"
+                style="height: 30px;width: 40px;cursor: pointer;">
+            <img class="refresh" id="refresh-btn"
+                src="https://chatbot.in1.nopaperforms.com/static/backend/img/refresh.png" alt="refresh"
+                title="refresh" style="height: 20px;width: 20px;margin-bottom: 4px;cursor: pointer;">
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot-message">
+                <span>Hi, how can I assist you today?</span>
+                <small class="time" id="chat-time">12:00 PM</small>
+            </div>
+        </div>
+        <div class="loading" id="loading">
+            <img src="https://www.kurzvmp.cz/wp-content/themes/itvkostce/images/loading.gif" alt="Loading...">
+        </div>
+        <div class="chat-input">
+
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <img id="send-btn" src="https://chatcdn.npfs.co/static/backend/img/chatbots/send_btn.png"
+                alt="send/rohit-backend" title="Send-Message"
+                style="height: 40px;width: 40px;margin-top: 2px;margin-left: 10px;cursor: pointer;border-radius: 50%;border-radius: 10px;border: 3px solid #e1ffc7;background-color: greenyellow;">
+            <button id="mic-btn" title="voice-chat">🎙️</button>
+        </div>
+    </div>
+
+      
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+      <hr />
+      <br />
+      <div class="footer__container bd-grid">
+        <div class="footer__content">
+          <a
+            href="#"
+            class="nav__logo"
+            style="padding-right: 15px; padding-bottom: 8px"
+          >
+            <span
+              style="
+                background: #069c5384;
+                padding: 10px;
+                border-radius: 50px;
+                padding-top: 50px;
+                padding-bottom: 15px;
+                border-bottom: 5px solid #069c53;
+              "
+              ><img
+                class="logo-img"
+                style="height: 60px; width: 110px"
+                src="IMAGES/logo.png"
+                alt="logo" /></span></a
+          ><br /><br />
+          <span class="footer__description"
+            >An ISO 9001 : 2005 Goverment Certified.</span
+          >
+          <div>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+            <a href="#" class="footer__social"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <u></u>
+          <h3 class="footer__title">Services</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Delivery</a></li>
+            <li><a href="#" class="footer__link">Pricing</a></li>
+            <li><a href="#" class="footer__link">Organic Product</a></li>
+            <li><a href="#" class="footer__link">Reserve your spot</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Information</h3>
+          <ul>
+            <li><a href="#" class="footer__link">Event</a></li>
+            <li><a href="#" class="footer__link">Contact us</a></li>
+            <li><a href="#" class="footer__link">Privacy policy</a></li>
+            <li><a href="#" class="footer__link">Terms of services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Adress</h3>
+          <ul>
+            <li>Organic Food Industries Pvt. Ltd.</li>
+            <li>Hanuman Nagar</li>
+            <li>Patna-800011 Bihar (INDIA)</li>
+            <li>Phone : +91 8580976323</li>
+            <li>Emaill-id : support523@gmail.com</li>
+            <li>Website : www.tazzaorganic.org</li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <hr />
+    </footer>
+    <div style="background-color: #048654">
+      <p
+        class="footer__copy"
+        style="
+          color: whitesmoke;
+          background-color: #0486545a;
+          padding-left: 15px;
+          padding-right: 10px;
+          padding-bottom: 10px;
+          margin-left: 5px;
+          padding-top: 10px;
+        "
+      >
+        &#169; 2024 Tazza Organic Industries Pvt. Ltd. <br />
+        All right reserved.
+      </p>
+    </div>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="JAVASCRIPT/Main.js"></script>
+
+    <!--======= CONTACT POPUP OPEN HOGA JAB CONTACT BUTTON CLICK HOGA ========-->
+    <script src="JAVASCRIPT/ContactPopup.js"></script>
+
+    <!--======== CHATBOT JS =========-->
+    <script src="JAVASCRIPT/ChatBot.js"></script>
+
+<!--==== Laoding home page start ===-->
+    <script>
+      window.addEventListener("load", function () {
+        // Time to display the loading screen (in milliseconds)
+        const loadingDuration = 2000; // 3 seconds
+
+        // Function to hide the loading screen and show the main content
+        function hideLoadingScreen() {
+          const loadingScreen = document.getElementById("loading-screen");
+          const mainContent = document.getElementById("main-content");
+
+          // Hide the loading screen with a fade-out effect
+          loadingScreen.style.opacity = "0";
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+            mainContent.style.display = "block"; // Show the main content
+          }, 500); // Match the duration of the fade-out effect
+        }
+
+        // Delay hiding the loading screen and showing the main content
+        setTimeout(hideLoadingScreen, loadingDuration);
+      });
+    </script>
+<!-- yah animate line nav ya header me ja raha hai -->
+<script>
+    // Adding the class to trigger the animation
+    window.addEventListener('load', function() {
+        document.querySelector('.line').style.animationPlayState = 'running';
+    });
+</script>
+  </body>
+</html>

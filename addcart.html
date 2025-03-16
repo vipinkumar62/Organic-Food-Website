@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tazza Product - Add to Cart</title>
+  <link
+  rel="icon"
+  href="https://cdn-icons-png.flaticon.com/512/5806/5806342.png"
+/>
+  <style>
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.product {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.quantity-select {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049;
+}
+
+.cart-modal, .payment-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-modal-content, .payment-modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.payment-btn, .pay-now-btn, .cancel-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.payment-btn:hover, .pay-now-btn:hover, .cancel-btn:hover {
+  background-color: #5cd460c9;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Organic Products Store</h1>
+  </header>
+
+  <div class="product-container">
+    <div class="product">
+      <img src="https://png.pngtree.com/element_pic/00/16/10/1858053a0e3b369.png" style="border-radius: 100%;" alt="Organic Product" class="product-image">
+      <h2>Organic Food</h2>
+      <p class="product-description">100% Organic, fresh and high-quality organic food available in different sizes at tazza organic.</p>
+      
+      <!-- Quantity Selection (kg/grams) -->
+      <label for="quantity">Select Quantity:</label>
+      <select id="quantity" class="quantity-select">
+        <option value="1kg">1 kg</option>
+        <option value="500g">500 g</option>
+        <option value="250g">250 g</option>
+      </select>
+
+      <!-- Add to Cart Button -->
+      <button id="addToCartBtn" class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Popup Modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+      <span id="closeCartModal" class="close-btn">&times;</span>
+      <h2>Your Cart</h2>
+      <p id="cartDetails"></p>
+      
+      <!-- Payment Button -->
+      <button id="paymentBtn" class="payment-btn">Proceed to Payment</button>
+    </div>
+  </div>
+
+  <!-- Payment Modal (Popup) -->
+  <div id="paymentModal" class="payment-modal">
+    <div class="payment-modal-content">
+      <span id="closePaymentModal" class="close-btn">&times;</span>
+      <h2>Payment Confirmation</h2>
+      <p>Do you want to proceed with the payment for <span id="paymentDetails"></span>?</p>
+
+      <!-- Payment Options -->
+      <button id="payNowBtn" class="pay-now-btn">Pay Now</button>
+     <a href="Tazza.html"> <button id="cancelPaymentBtn" class="cancel-btn">Go to Home</button></a>
+    </div>
+  </div>
+
+  <script>
+  
+
+// Get elements
+const addToCartBtn = document.getElementById('addToCartBtn');
+const cartModal = document.getElementById('cartModal');
+const closeCartModal = document.getElementById('closeCartModal');
+const cartDetails = document.getElementById('cartDetails');
+const paymentBtn = document.getElementById('paymentBtn');
+const paymentModal = document.getElementById('paymentModal');
+const closePaymentModal = document.getElementById('closePaymentModal');
+const paymentDetails = document.getElementById('paymentDetails');
+const payNowBtn = document.getElementById('payNowBtn');
+const cancelPaymentBtn = document.getElementById('cancelPaymentBtn');
+const quantitySelect = document.getElementById('quantity');
+
+// Add to cart functionality
+addToCartBtn.addEventListener('click', () => {
+  const selectedQuantity = quantitySelect.value;
+  cartDetails.textContent = `You have added ${selectedQuantity} of Organic Food to your cart.`;
+  cartModal.style.display = 'block'; // Show the cart modal
+});
+
+// Close cart modal
+closeCartModal.addEventListener('click', () => {
+  cartModal.style.display = 'none';
+});
+
+// Proceed to payment functionality
+paymentBtn.addEventListener('click', () => {
+  const selectedQuantity = quantitySelect.value;
+  paymentDetails.textContent = `${selectedQuantity} of Organic Wheat`;
+  paymentModal.style.display = 'block'; // Show the payment confirmation modal
+});
+
+// Close payment modal
+closePaymentModal.addEventListener('click', () => {
+  paymentModal.style.display = 'none';
+});
+
+// Confirm Payment (Simulated)
+payNowBtn.addEventListener('click', () => {
+  alert('Payment successful! You will be redirected to the payment gateway...');
+  paymentModal.style.display = 'none';
+  // Here, you can integrate a real payment gateway (Stripe, PayPal, etc.)
+});
+
+// Cancel Payment
+cancelPaymentBtn.addEventListener('click', () => {
+  paymentModal.style.display = 'none';
+});
+
+  </script>
+</body>
+</html>
